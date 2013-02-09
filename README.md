@@ -24,9 +24,9 @@ Now you can import some exchange rates:
 
 Example call:
 
-  $ ExchangeRate.at(date, "USD", "GBP")
+    $ ExchangeRate.at(date, "USD", "GBP")
 
 List of available currencies:
 
-  $ ExchangeRate.currencies
+    $ ExchangeRate.currencies
 
