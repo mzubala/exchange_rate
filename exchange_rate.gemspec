@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version = ExchangeRate::VERSION
   gem.authors = ["pwoloszun"]
   gem.email = ["maciej.zubala@gmail.com"]
-  gem.description = %q{TODO: Write a gem description}
-  gem.summary = %q{TODO: Write a gem summary}
+  gem.description = %q{Exchange rate}
+  gem.summary = %q{Exchange rate}
   gem.homepage = ""
 
   gem.files = `git ls-files`.split($/)
