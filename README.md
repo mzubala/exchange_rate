@@ -1,29 +1,32 @@
 # ExchangeRate
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'exchange_rate'
+    gem 'exchange_rate', git: "git@github.com:mzubala/exchange_rate.git"
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Gem stores exchange rates in relational database and it uses active_record.
+To update your db schema in rails app generate and run migrations:
 
-    $ gem install exchange_rate
+    $ rails generate exchange_rate:install
+    $ rake db:migrate
+
+Now you can import some exchange rates:
+
+    $ rake exchange_rate:import
 
 ## Usage
 
-TODO: Write usage instructions here
+Example call:
 
-## Contributing
+  $ ExchangeRate.at(date, "USD", "GBP")
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+List of available currencies:
+
+  $ ExchangeRate.currencies
+
